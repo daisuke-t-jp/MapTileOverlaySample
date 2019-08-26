@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MapTileOverlay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="X9h-Yw-0vg">
+                                <rect key="frame" x="0.0" y="58" width="414" height="786"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイル提供：国土地理院" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="yHZ-Hx-2Zr">
+                                <rect key="frame" x="203" y="800.5" width="191" height="20.5"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fw-vl-iSE">
+                                <rect key="frame" x="20" y="85" width="277" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="M1d-Va-F2a"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="277" id="g3e-8H-7bC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="標準ベースタイル"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idv-gi-dIX">
+                                <rect key="frame" x="20" y="123" width="277" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="WKo-e8-Q4K"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="277" id="kVY-Mj-S6S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="国土地理院ベースタイル"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHp-jD-DU8">
+                                <rect key="frame" x="20" y="161" width="277" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="277" id="Cx4-3f-oEg"/>
+                                    <constraint firstAttribute="height" constant="30" id="rMC-5X-xj2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="「明治期の低湿地」をオーバーレイ"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="X9h-Yw-0vg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0Al-0a-5py"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yHZ-Hx-2Zr" secondAttribute="trailing" constant="20" id="982-eL-McY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="X9h-Yw-0vg" secondAttribute="bottom" constant="18" id="Agj-BK-Ire"/>
+                            <constraint firstItem="idv-gi-dIX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="DWf-5A-0aK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="idv-gi-dIX" secondAttribute="trailing" constant="117" id="Fvm-LD-U6y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yHZ-Hx-2Zr" secondAttribute="bottom" constant="41" id="Pem-Z4-Zmg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1fw-vl-iSE" secondAttribute="trailing" constant="117" id="Piy-kg-A4c"/>
+                            <constraint firstItem="1fw-vl-iSE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="VnD-Wg-IDn"/>
+                            <constraint firstItem="yHZ-Hx-2Zr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="168" id="Xoz-Pl-24G"/>
+                            <constraint firstItem="idv-gi-dIX" firstAttribute="top" secondItem="1fw-vl-iSE" secondAttribute="bottom" constant="8" id="bzz-uf-mRL"/>
+                            <constraint firstItem="X9h-Yw-0vg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cig-I9-WcW"/>
+                            <constraint firstItem="uHp-jD-DU8" firstAttribute="top" secondItem="idv-gi-dIX" secondAttribute="bottom" constant="8" id="hds-B4-8Oc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uHp-jD-DU8" secondAttribute="trailing" constant="117" id="jdz-PZ-vft"/>
+                            <constraint firstItem="uHp-jD-DU8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ldj-NC-eTo"/>
+                            <constraint firstItem="X9h-Yw-0vg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="14" id="rDM-vs-dP4"/>
+                            <constraint firstItem="1fw-vl-iSE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="41" id="s9f-2I-N2T"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonBaseGSI" destination="idv-gi-dIX" id="SPI-c3-vUd"/>
+                        <outlet property="buttonBaseStandard" destination="1fw-vl-iSE" id="UA0-iV-nhD"/>
+                        <outlet property="buttonOverlay" destination="uHp-jD-DU8" id="XUi-hT-hFV"/>
+                        <outlet property="mapView" destination="X9h-Yw-0vg" id="Mem-pT-hHt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="120.53571428571428"/>
+        </scene>
+    </scenes>
+</document>
